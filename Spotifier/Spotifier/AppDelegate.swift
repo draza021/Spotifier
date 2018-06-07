@@ -13,9 +13,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    private var dataManager: DataManager?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // Create middleware managers
+        dataManager = DataManager()
+        
+        
+        // Create app dependency
+        
+        let dependencies = AppDependency(dataManager: dataManager)
+        
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SearchController") as! SearchController
+        vc.dependencies = dependencies
+        
+        let nc = UINavigationController(rootViewController: vc)
+        window?.rootViewController = nc
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

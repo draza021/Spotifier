@@ -7,17 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2943C7120C959C800EF0789 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2943C7020C959C800EF0789 /* SearchController.swift */; };
+		C2943C7420C95A6E00EF0789 /* ArtistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2943C7320C95A6E00EF0789 /* ArtistController.swift */; };
+		C2943C7620C95A7F00EF0789 /* ArtistListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2943C7520C95A7F00EF0789 /* ArtistListController.swift */; };
+		C2943C7820C95B6000EF0789 /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2943C7720C95B6000EF0789 /* Spotify.swift */; };
+		C2943C7B20C95D8600EF0789 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2943C7A20C95D8600EF0789 /* Artist.swift */; };
+		C2943C7D20C95DDA00EF0789 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2943C7C20C95DDA00EF0789 /* Album.swift */; };
+		C2943C7F20C95E1900EF0789 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2943C7E20C95E1900EF0789 /* SearchResult.swift */; };
+		C2943C8120C95F0C00EF0789 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2943C8020C95F0C00EF0789 /* DataManager.swift */; };
+		C2943C8320C9609800EF0789 /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2943C8220C9609800EF0789 /* AppDependency.swift */; };
+		C2943C8520C965AE00EF0789 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2943C8420C965AE00EF0789 /* DataError.swift */; };
 		C2E5EE8420C908EE00290198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5EE8320C908EE00290198 /* AppDelegate.swift */; };
-		C2E5EE8620C908EE00290198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5EE8520C908EE00290198 /* ViewController.swift */; };
 		C2E5EE8920C908EE00290198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E5EE8720C908EE00290198 /* Main.storyboard */; };
 		C2E5EE8B20C908F500290198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E5EE8A20C908F500290198 /* Assets.xcassets */; };
 		C2E5EE8E20C908F500290198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E5EE8C20C908F500290198 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C2943C7020C959C800EF0789 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		C2943C7320C95A6E00EF0789 /* ArtistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistController.swift; sourceTree = "<group>"; };
+		C2943C7520C95A7F00EF0789 /* ArtistListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListController.swift; sourceTree = "<group>"; };
+		C2943C7720C95B6000EF0789 /* Spotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
+		C2943C7A20C95D8600EF0789 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		C2943C7C20C95DDA00EF0789 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		C2943C7E20C95E1900EF0789 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		C2943C8020C95F0C00EF0789 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		C2943C8220C9609800EF0789 /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
+		C2943C8420C965AE00EF0789 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		C2E5EE8020C908EE00290198 /* Spotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E5EE8320C908EE00290198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C2E5EE8520C908EE00290198 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C2E5EE8820C908EE00290198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2E5EE8A20C908F500290198 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2E5EE8D20C908F500290198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +53,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2943C7220C959EF00EF0789 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C2943C7020C959C800EF0789 /* SearchController.swift */,
+				C2943C7320C95A6E00EF0789 /* ArtistController.swift */,
+				C2943C7520C95A7F00EF0789 /* ArtistListController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C2943C7920C95D7B00EF0789 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				C2943C8020C95F0C00EF0789 /* DataManager.swift */,
+				C2943C7A20C95D8600EF0789 /* Artist.swift */,
+				C2943C7C20C95DDA00EF0789 /* Album.swift */,
+				C2943C7E20C95E1900EF0789 /* SearchResult.swift */,
+				C2943C8420C965AE00EF0789 /* DataError.swift */,
+				C2943C8220C9609800EF0789 /* AppDependency.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		C2E5EE7720C908EE00290198 = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +95,11 @@
 		C2E5EE8220C908EE00290198 /* Spotifier */ = {
 			isa = PBXGroup;
 			children = (
+				C2943C7920C95D7B00EF0789 /* DataModel */,
 				C2E5EE8320C908EE00290198 /* AppDelegate.swift */,
-				C2E5EE8520C908EE00290198 /* ViewController.swift */,
+				C2943C7720C95B6000EF0789 /* Spotify.swift */,
 				C2E5EE8720C908EE00290198 /* Main.storyboard */,
+				C2943C7220C959EF00EF0789 /* UI */,
 				C2E5EE8A20C908F500290198 /* Assets.xcassets */,
 				C2E5EE8C20C908F500290198 /* LaunchScreen.storyboard */,
 				C2E5EE8F20C908F500290198 /* Info.plist */,
@@ -135,8 +178,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2E5EE8620C908EE00290198 /* ViewController.swift in Sources */,
+				C2943C7B20C95D8600EF0789 /* Artist.swift in Sources */,
+				C2943C7620C95A7F00EF0789 /* ArtistListController.swift in Sources */,
+				C2943C7F20C95E1900EF0789 /* SearchResult.swift in Sources */,
+				C2943C7820C95B6000EF0789 /* Spotify.swift in Sources */,
 				C2E5EE8420C908EE00290198 /* AppDelegate.swift in Sources */,
+				C2943C7420C95A6E00EF0789 /* ArtistController.swift in Sources */,
+				C2943C8320C9609800EF0789 /* AppDependency.swift in Sources */,
+				C2943C7D20C95DDA00EF0789 /* Album.swift in Sources */,
+				C2943C8520C965AE00EF0789 /* DataError.swift in Sources */,
+				C2943C8120C95F0C00EF0789 /* DataManager.swift in Sources */,
+				C2943C7120C959C800EF0789 /* SearchController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
