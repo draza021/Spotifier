@@ -22,6 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Create middleware managers
         dataManager = DataManager()
         
+        dataManager?.search(for: "bob sinclair", type: .artist, callback: { (_, _) in
+        
+        })
+        
+        return true
         
         // Create app dependency
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C20D0D6A20CFC5C800ED1612 /* SpotifyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20D0D6920CFC5C800ED1612 /* SpotifyError.swift */; };
 		C2943C7120C959C800EF0789 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2943C7020C959C800EF0789 /* SearchController.swift */; };
 		C2943C7420C95A6E00EF0789 /* ArtistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2943C7320C95A6E00EF0789 /* ArtistController.swift */; };
 		C2943C7620C95A7F00EF0789 /* ArtistListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2943C7520C95A7F00EF0789 /* ArtistListController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C20D0D6920CFC5C800ED1612 /* SpotifyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyError.swift; sourceTree = "<group>"; };
 		C2943C7020C959C800EF0789 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		C2943C7320C95A6E00EF0789 /* ArtistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistController.swift; sourceTree = "<group>"; };
 		C2943C7520C95A7F00EF0789 /* ArtistListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				C2943C7920C95D7B00EF0789 /* DataModel */,
 				C2E5EE8320C908EE00290198 /* AppDelegate.swift */,
 				C2943C7720C95B6000EF0789 /* Spotify.swift */,
+				C20D0D6920CFC5C800ED1612 /* SpotifyError.swift */,
 				C2E5EE8720C908EE00290198 /* Main.storyboard */,
 				C2943C7220C959EF00EF0789 /* UI */,
 				C2E5EE8A20C908F500290198 /* Assets.xcassets */,
@@ -183,6 +186,7 @@
 				C2943C7F20C95E1900EF0789 /* SearchResult.swift in Sources */,
 				C2943C7820C95B6000EF0789 /* Spotify.swift in Sources */,
 				C2E5EE8420C908EE00290198 /* AppDelegate.swift in Sources */,
+				C20D0D6A20CFC5C800ED1612 /* SpotifyError.swift in Sources */,
 				C2943C7420C95A6E00EF0789 /* ArtistController.swift in Sources */,
 				C2943C8320C9609800EF0789 /* AppDependency.swift in Sources */,
 				C2943C7D20C95DDA00EF0789 /* Album.swift in Sources */,
