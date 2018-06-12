@@ -7,23 +7,72 @@
 //
 
 import Foundation
+import SwiftyOAuth
+
 
 typealias JSON = [String: Any]
 
 final class Spotify {
     
     //init() {}
+    
     typealias Callback = (JSON?, SpotifyError?) -> Void
     
     func call(endpoint: Endpoint, callback: @escaping Callback) {
-        let req = endpoint.urlRequest
+        let apiRequest = (endpoint, callback)
+
+        // apply Authorization
         
+        oAuth(request: apiRequest)
+        
+    }
+    
+    private typealias APIRequest = (endpoint: Endpoint, callback: Callback)
+    private var queuedRequests: [APIRequest] = []
+}
+
+private extension Spotify {
+    private func oAuth(request: APIRequest) {
+        
+        // is token available
+        if false {
+            queuedRequests.append(request)
+            
+            fetchToken()
+            return
+        }
+        
+        
+        // is token valid
+        
+        //execute
+        execute(request: request)
+        
+    }
+    
+    private func execute(request: APIRequest) {
+        let req = request.endpoint.urlRequest
         let task = URLSession.shared.dataTask(with: req) { (data, response, error) in
             
             print(error?.localizedDescription ?? "")
             
+            // request.callback()
+            
         }
         task.resume()
+    }
+    
+    private func fetchToken() {
+       
+        
+        
+        processQueuedRequests()
+    }
+    
+    func processQueuedRequests() {
+        for apiReq in queuedRequests {
+            oAuth(request: apiReq)
+        }
     }
 }
 
