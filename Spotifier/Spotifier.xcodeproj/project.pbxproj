@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADF00A4F77AD9D67A1EF25D2 /* Pods_iOSapp_Spotifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397B47FDABCF1CFDEE40235F /* Pods_iOSapp_Spotifier.framework */; };
 		C20D0D6A20CFC5C800ED1612 /* SpotifyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20D0D6920CFC5C800ED1612 /* SpotifyError.swift */; };
 		C2943C7120C959C800EF0789 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2943C7020C959C800EF0789 /* SearchController.swift */; };
 		C2943C7420C95A6E00EF0789 /* ArtistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2943C7320C95A6E00EF0789 /* ArtistController.swift */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		397B47FDABCF1CFDEE40235F /* Pods_iOSapp_Spotifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSapp_Spotifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		475508A04551C2CB7DD5F88A /* Pods-iOSapp-Spotifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSapp-Spotifier.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSapp-Spotifier/Pods-iOSapp-Spotifier.debug.xcconfig"; sourceTree = "<group>"; };
 		C20D0D6920CFC5C800ED1612 /* SpotifyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyError.swift; sourceTree = "<group>"; };
 		C2943C7020C959C800EF0789 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		C2943C7320C95A6E00EF0789 /* ArtistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistController.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		C2E5EE8A20C908F500290198 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2E5EE8D20C908F500290198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2E5EE8F20C908F500290198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5776F0AF6E92EA33D60D904 /* Pods-iOSapp-Spotifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSapp-Spotifier.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSapp-Spotifier/Pods-iOSapp-Spotifier.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,12 +53,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADF00A4F77AD9D67A1EF25D2 /* Pods_iOSapp_Spotifier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B5EDC2DE3BA8E6466788EFC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				397B47FDABCF1CFDEE40235F /* Pods_iOSapp_Spotifier.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDE25FD9869F97594381A38C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				475508A04551C2CB7DD5F88A /* Pods-iOSapp-Spotifier.debug.xcconfig */,
+				D5776F0AF6E92EA33D60D904 /* Pods-iOSapp-Spotifier.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C2943C7220C959EF00EF0789 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +105,8 @@
 			children = (
 				C2E5EE8220C908EE00290198 /* Spotifier */,
 				C2E5EE8120C908EE00290198 /* Products */,
+				BDE25FD9869F97594381A38C /* Pods */,
+				B5EDC2DE3BA8E6466788EFC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2E5EE9220C908F500290198 /* Build configuration list for PBXNativeTarget "Spotifier" */;
 			buildPhases = (
+				4E995AA4C848F90AC7EC6B82 /* [CP] Check Pods Manifest.lock */,
 				C2E5EE7C20C908EE00290198 /* Sources */,
 				C2E5EE7D20C908EE00290198 /* Frameworks */,
 				C2E5EE7E20C908EE00290198 /* Resources */,
+				D13CF84F1355860C57361203 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,6 +201,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E995AA4C848F90AC7EC6B82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSapp-Spotifier-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D13CF84F1355860C57361203 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iOSapp-Spotifier/Pods-iOSapp-Spotifier-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyOAuth/SwiftyOAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyOAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinyConstraints.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSapp-Spotifier/Pods-iOSapp-Spotifier-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C2E5EE7C20C908EE00290198 /* Sources */ = {
@@ -334,15 +401,13 @@
 		};
 		C2E5EE9320C908F500290198 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 475508A04551C2CB7DD5F88A /* Pods-iOSapp-Spotifier.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q4KMZUSUN5;
 				INFOPLIST_FILE = Spotifier/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.NSIDDevelopment.Spotifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -352,15 +417,13 @@
 		};
 		C2E5EE9420C908F500290198 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5776F0AF6E92EA33D60D904 /* Pods-iOSapp-Spotifier.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q4KMZUSUN5;
 				INFOPLIST_FILE = Spotifier/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.NSIDDevelopment.Spotifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

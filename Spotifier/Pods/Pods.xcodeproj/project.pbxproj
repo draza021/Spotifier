@@ -1,0 +1,913 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00347D9058F5502CCED4592B9CD6209D /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C3366BF625E8572A7D21EB19EEC928 /* Spotify.swift */; };
+		016F9D386480B163F3A287DD0D7F1E55 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA35F3D84D318085D02722A603A359BF /* ServerTrustPolicy.swift */; };
+		025C919732874C1A70B33E47218A68D8 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125594A019A04B86974115291EB867E5 /* Provider.swift */; };
+		091C47C32BA65D6994F15617BA72337D /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5895314E2609DF4D18FF66412B967 /* ResponseType.swift */; };
+		0AAEF5B4C663C3FF65D04245F8090782 /* StackExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6FDA2F9DBA38B28A9FD59C7959121A /* StackExchange.swift */; };
+		0EF7007D56E9EA21D2D66DF09B3A4431 /* TinyConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C0A606F97365F3D66FB0349D806146 /* TinyConstraints-dummy.m */; };
+		10C6DAC021AA1F975481BE3E33A9BDA1 /* UbiquitousKeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C77D0AB3DB41F38DF2E48455D35787 /* UbiquitousKeyValueStore.swift */; };
+		128FBDE60F98679993A6529D4932A1D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		1350B9A9A89DD8B5DB705B33DB194A39 /* Pods-iOSapp-Spotifier-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 553157CADA78D1E53126DC2BEB3A6DE5 /* Pods-iOSapp-Spotifier-dummy.m */; };
+		14CB1C0E9B9B21A6DC5332B0C8FD6237 /* Pods-iOSapp-Spotifier-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B55F984019C3E820370E5545EB21FFA9 /* Pods-iOSapp-Spotifier-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FB29F7CD4A83F4AA2EA12C71F31D235 /* TinyConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F189E23D948F414365F6A99C862DAB23 /* TinyConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43C5DD92D8814B0DD742F6841956DE77 /* Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198CB814210FB1A1775538488EFD1394 /* Google.swift */; };
+		4755E2F7C71E5B5416C836BA0644A32F /* Feedly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F11026F1C4FCF1712F01ADAB09B5E0 /* Feedly.swift */; };
+		48D69037FE6C576BBC1FB2255145CAF6 /* Foursquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8962F67EA8C1B394CB84B02E77FF643 /* Foursquare.swift */; };
+		48DAFED8E9165A227636C4DE4C9CD463 /* Reddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88D24DC8FB3938E75F4A7E04BADB3F /* Reddit.swift */; };
+		4C80AF032F9FEE4A44F638D605A9BFB7 /* GrantType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A230DB9F4AC39A03565CE8EAFCB949FB /* GrantType.swift */; };
+		4F846C728D88F84C7B48D0250896395F /* Vimeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368907BDF290F7FB2C1B964D8C5247C5 /* Vimeo.swift */; };
+		53D26CE14261D10671721D0B0F678318 /* Strava.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569ECEB3A4031622A8047CA29F990F62 /* Strava.swift */; };
+		574E67B2EAB703340247FE3B0B9FD605 /* Basecamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B37677F3E632F927AEB20614CEFF2 /* Basecamp.swift */; };
+		5FF7ABDAB4A8DF019228903209283720 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE8051149EA7D6F537D4455EE7678E5 /* Result.swift */; };
+		61941283438691AA0F06CDD0723D00A1 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCA6E517B31C287C70A54007228608 /* GitHub.swift */; };
+		62412002F949FC12E8919FF70DAC839F /* Stripe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B36C715A13CEF404B763E6A537708 /* Stripe.swift */; };
+		67C4C1D985C0647ED48552769FA671DD /* Weibo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C061F385502C2A15F2AAD3B7289A47 /* Weibo.swift */; };
+		6EE2BE697B1B1796FF73F27CDE132210 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D377AAAE85BA0C2B9AB5645F98338066 /* Token.swift */; };
+		7BE407AD64D1CA5D610C70AA4D23EC26 /* SwiftyOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FBA23E6397821F8E142676C3A8E7505 /* SwiftyOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7ECD7B9B3C5A6C961DAEA9A9DEE4ACEA /* UberRUSH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F57E8BCEA93F9E11E6DC90E1567388 /* UberRUSH.swift */; };
+		877A862CA4B08EB6ACD2C9F9F90C4BB6 /* Abstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0732C9BA3546D638555C6525D19AB697 /* Abstraction.swift */; };
+		87BFF6451A83C51725395A390CF1E6D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		88B0D42B94A9566BAF96813ED2C49677 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AFC6627D7412699193F3720A6CD3D /* Error.swift */; };
+		890C407D49370C44BB060A4D51C33959 /* TinyConstraints+superview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4332376B0E6CFB8EFBA21F0A6B0B48 /* TinyConstraints+superview.swift */; };
+		92514F1D43CDA9658ED1DF884624A82C /* SwiftyOAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73654C6D07F4304A351CEB409E937D80 /* SwiftyOAuth-dummy.m */; };
+		94A07EE65AF94E20A46F21C43A4ED726 /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026BF03CE5A5360588D26B8E26626BD /* TokenType.swift */; };
+		96A7445439B4FA1A1521CA26B359FF2C /* Medium.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CFC05605C8A593B8028588131C0DE /* Medium.swift */; };
+		9710187B369300DDB3B6061C39ADFBA6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98D220EE266400D47359A897B144CBA /* WebViewController.swift */; };
+		99DD108E6DAE7FB35072976C456612FC /* Dropbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8923F6359240160661B1946DC8C1E6 /* Dropbox.swift */; };
+		A1A117E8388CB9B3B7BA4F2E5D171DB3 /* Dribbble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4475B6BB42A04B37DFB2B526D2E9F355 /* Dribbble.swift */; };
+		AB8922A2237588E323D401C531AE8B2D /* SoundCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6D04E31806419424CEFF70A3ECE0FE /* SoundCloud.swift */; };
+		B8D8EB77D58489A622680B238D3910E2 /* Uber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38BE1223F8C0F413ECF4AB03406730 /* Uber.swift */; };
+		C0E8D606E4D88471DE176246E5F1779C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA00B4ECDE53BC02931647A3EC51C3A /* Utilities.swift */; };
+		C16AEB83C5C650BFA15FC3000D292798 /* SwiftyOAuth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD7178C0C1E13AFE6B192DF2312CD07B /* SwiftyOAuth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C205FBDE30EE421691ED5BB5A3EFEB01 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F4C4B4D19A1C99D4715B13F285EB4 /* KeychainStore.swift */; };
+		CF9001AC4B110C30B28268F66EB5EBF5 /* Stuart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF5F1F299E59648424B71A3DC58D60 /* Stuart.swift */; };
+		D039DC8FE7B21B7745D13CAB1B1A7756 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		DA32233343FB9510553444289EDD6A8D /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E55650912976E61FF36711A59A28EC /* Keychain.swift */; };
+		DDA7CA8CAB90E6F20841E61EF0DD8D86 /* TokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D0CD91E153B158E775D9A247BEC46 /* TokenStore.swift */; };
+		DF186D7D99091E7AED1EF2A3E26B5956 /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF51100710CEF208F97B8B13BDC5CD /* Constrainable.swift */; };
+		DF558CE78BF2597FF1CAD6060C92F8F3 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C7E8A9804DEDFAD2C4BC3CF302BB6 /* Constraints.swift */; };
+		E617C4BDA11C77F87FBEEDAAE32434D5 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2BDA09AACFABCEF9BA4E6CAED3DEB /* Stack.swift */; };
+		E8365C6A873D75A2A09CA12E0B234FD6 /* Slack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A5A4A9A7DEF6E4B188AF154AC34764 /* Slack.swift */; };
+		EA5030931BCEFFBD0279B40EB6378B63 /* TinyConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D257A3749FAF86F866E888DE1A5693 /* TinyConstraints.swift */; };
+		EAC0B3060C85A759F58F22EF064195EA /* Meetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831436BF6B25E0331892650255697BB /* Meetup.swift */; };
+		F02354C8F24D3477895CB32CF68AF49D /* Instagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1EE0422E4B7875C043AF93CF97F60 /* Instagram.swift */; };
+		F18CECFEFB709E27CD5F6E0D9ED94FD5 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850EB5AB996D3814F9117726A3D5F33C /* UserDefaults.swift */; };
+		FE77DBEFB0E32E750355FBB34C5EF121 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8093E95A294AA957CF1EBA0C56B71E /* HTTP.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E586DD01797D927555BC864FC710D37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 266F8FDA1211A2694F3DBAE85501A596;
+			remoteInfo = TinyConstraints;
+		};
+		5F924509484D50913685198BA8F9B12F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52349602048031465247AF43C7EE199B;
+			remoteInfo = SwiftyOAuth;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008F443FCEA351B27061209F9F7FE285 /* SwiftyOAuth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyOAuth.modulemap; sourceTree = "<group>"; };
+		00E5895314E2609DF4D18FF66412B967 /* ResponseType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseType.swift; path = Source/Enums/ResponseType.swift; sourceTree = "<group>"; };
+		03348105EA8AFAB5D83A3C1D4F009DE6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03A2BDA09AACFABCEF9BA4E6CAED3DEB /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = TinyConstraints/Classes/Stack.swift; sourceTree = "<group>"; };
+		0461539ED9DBA95798578C9C395EFA85 /* Pods_iOSapp_Spotifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iOSapp_Spotifier.framework; path = "Pods-iOSapp-Spotifier.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0732C9BA3546D638555C6525D19AB697 /* Abstraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Abstraction.swift; path = TinyConstraints/Classes/Abstraction.swift; sourceTree = "<group>"; };
+		0CE8051149EA7D6F537D4455EE7678E5 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = "Source/Supporting Files/Result.swift"; sourceTree = "<group>"; };
+		125594A019A04B86974115291EB867E5 /* Provider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Provider.swift; path = Source/Provider.swift; sourceTree = "<group>"; };
+		17160E321D626CD70D76C6328973B285 /* SwiftyOAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyOAuth-prefix.pch"; sourceTree = "<group>"; };
+		188C7E8A9804DEDFAD2C4BC3CF302BB6 /* Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = TinyConstraints/Classes/Constraints.swift; sourceTree = "<group>"; };
+		198CB814210FB1A1775538488EFD1394 /* Google.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Google.swift; path = Source/Providers/Google.swift; sourceTree = "<group>"; };
+		1B38BE1223F8C0F413ECF4AB03406730 /* Uber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Uber.swift; path = Source/Providers/Uber.swift; sourceTree = "<group>"; };
+		1C2ED2FC1F1EB43E51974DA93298A4B9 /* Pods-iOSapp-Spotifier.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iOSapp-Spotifier.modulemap"; sourceTree = "<group>"; };
+		1FBA23E6397821F8E142676C3A8E7505 /* SwiftyOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftyOAuth.h; path = "Source/Supporting Files/SwiftyOAuth.h"; sourceTree = "<group>"; };
+		2C2B37677F3E632F927AEB20614CEFF2 /* Basecamp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Basecamp.swift; path = Source/Providers/Basecamp.swift; sourceTree = "<group>"; };
+		368907BDF290F7FB2C1B964D8C5247C5 /* Vimeo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Vimeo.swift; path = Source/Providers/Vimeo.swift; sourceTree = "<group>"; };
+		3FBCA6E517B31C287C70A54007228608 /* GitHub.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GitHub.swift; path = Source/Providers/GitHub.swift; sourceTree = "<group>"; };
+		4026BF03CE5A5360588D26B8E26626BD /* TokenType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenType.swift; path = Source/Enums/TokenType.swift; sourceTree = "<group>"; };
+		4475B6BB42A04B37DFB2B526D2E9F355 /* Dribbble.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dribbble.swift; path = Source/Providers/Dribbble.swift; sourceTree = "<group>"; };
+		44D2440CCB22F0A57B006D9EB1D23C9E /* Pods-iOSapp-Spotifier-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iOSapp-Spotifier-acknowledgements.markdown"; sourceTree = "<group>"; };
+		46C77D0AB3DB41F38DF2E48455D35787 /* UbiquitousKeyValueStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UbiquitousKeyValueStore.swift; path = Source/TokenStores/UbiquitousKeyValueStore.swift; sourceTree = "<group>"; };
+		553157CADA78D1E53126DC2BEB3A6DE5 /* Pods-iOSapp-Spotifier-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iOSapp-Spotifier-dummy.m"; sourceTree = "<group>"; };
+		560AFC6627D7412699193F3720A6CD3D /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
+		569ECEB3A4031622A8047CA29F990F62 /* Strava.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Strava.swift; path = Source/Providers/Strava.swift; sourceTree = "<group>"; };
+		5702457CA4AFE5D4AF7D0CFCB3C248A4 /* Pods-iOSapp-Spotifier-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOSapp-Spotifier-frameworks.sh"; sourceTree = "<group>"; };
+		5BFF5F1F299E59648424B71A3DC58D60 /* Stuart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stuart.swift; path = Source/Providers/Stuart.swift; sourceTree = "<group>"; };
+		5C0D57E00BEBB8BF8FDF949E355AE179 /* Pods-iOSapp-Spotifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOSapp-Spotifier.debug.xcconfig"; sourceTree = "<group>"; };
+		5CEF51100710CEF208F97B8B13BDC5CD /* Constrainable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrainable.swift; path = TinyConstraints/Classes/Constrainable.swift; sourceTree = "<group>"; };
+		5E4332376B0E6CFB8EFBA21F0A6B0B48 /* TinyConstraints+superview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TinyConstraints+superview.swift"; path = "TinyConstraints/Classes/TinyConstraints+superview.swift"; sourceTree = "<group>"; };
+		628F6E908163231A8DA0B8D1F8CB2E1F /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TinyConstraints.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		67D257A3749FAF86F866E888DE1A5693 /* TinyConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyConstraints.swift; path = TinyConstraints/Classes/TinyConstraints.swift; sourceTree = "<group>"; };
+		6B8093E95A294AA957CF1EBA0C56B71E /* HTTP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTP.swift; path = "Source/Supporting Files/HTTP.swift"; sourceTree = "<group>"; };
+		6CA00B4ECDE53BC02931647A3EC51C3A /* Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = "Source/Supporting Files/Utilities.swift"; sourceTree = "<group>"; };
+		6ECE80336A76BD664A1F153CDE560524 /* TinyConstraints.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.xcconfig; sourceTree = "<group>"; };
+		73654C6D07F4304A351CEB409E937D80 /* SwiftyOAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyOAuth-dummy.m"; sourceTree = "<group>"; };
+		77C0A606F97365F3D66FB0349D806146 /* TinyConstraints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TinyConstraints-dummy.m"; sourceTree = "<group>"; };
+		7C98FB2A9AAA54309F150764A1F5CB2B /* SwiftyOAuth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyOAuth.xcconfig; sourceTree = "<group>"; };
+		850EB5AB996D3814F9117726A3D5F33C /* UserDefaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserDefaults.swift; path = Source/TokenStores/UserDefaults.swift; sourceTree = "<group>"; };
+		868F7132ED3A6B849011B395BF884C1E /* Pods-iOSapp-Spotifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOSapp-Spotifier.release.xcconfig"; sourceTree = "<group>"; };
+		87F57E8BCEA93F9E11E6DC90E1567388 /* UberRUSH.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UberRUSH.swift; path = Source/Providers/UberRUSH.swift; sourceTree = "<group>"; };
+		882F4C4B4D19A1C99D4715B13F285EB4 /* KeychainStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainStore.swift; path = Source/TokenStores/KeychainStore.swift; sourceTree = "<group>"; };
+		8831436BF6B25E0331892650255697BB /* Meetup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Meetup.swift; path = Source/Providers/Meetup.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97F11026F1C4FCF1712F01ADAB09B5E0 /* Feedly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Feedly.swift; path = Source/Providers/Feedly.swift; sourceTree = "<group>"; };
+		A230DB9F4AC39A03565CE8EAFCB949FB /* GrantType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GrantType.swift; path = Source/Enums/GrantType.swift; sourceTree = "<group>"; };
+		A2E55650912976E61FF36711A59A28EC /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = "Source/Supporting Files/Keychain.swift"; sourceTree = "<group>"; };
+		A71FCB12B7CA32166C4E064964BDFBE0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8962F67EA8C1B394CB84B02E77FF643 /* Foursquare.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Foursquare.swift; path = Source/Providers/Foursquare.swift; sourceTree = "<group>"; };
+		A97B36C715A13CEF404B763E6A537708 /* Stripe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stripe.swift; path = Source/Providers/Stripe.swift; sourceTree = "<group>"; };
+		B36E004E74D8BB2119018932EB8C607B /* Pods-iOSapp-Spotifier-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iOSapp-Spotifier-acknowledgements.plist"; sourceTree = "<group>"; };
+		B55F984019C3E820370E5545EB21FFA9 /* Pods-iOSapp-Spotifier-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iOSapp-Spotifier-umbrella.h"; sourceTree = "<group>"; };
+		B5C061F385502C2A15F2AAD3B7289A47 /* Weibo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Weibo.swift; path = Source/Providers/Weibo.swift; sourceTree = "<group>"; };
+		B98D220EE266400D47359A897B144CBA /* WebViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = "Source/Supporting Files/WebViewController.swift"; sourceTree = "<group>"; };
+		BA35F3D84D318085D02722A603A359BF /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = "Source/Supporting Files/ServerTrustPolicy.swift"; sourceTree = "<group>"; };
+		BA8923F6359240160661B1946DC8C1E6 /* Dropbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dropbox.swift; path = Source/Providers/Dropbox.swift; sourceTree = "<group>"; };
+		BC13A81928282951CFADC2FA2FE718EB /* TinyConstraints-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-prefix.pch"; sourceTree = "<group>"; };
+		C6B3788905F634D98FF249E8B1999099 /* TinyConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TinyConstraints.modulemap; sourceTree = "<group>"; };
+		CDA1EE0422E4B7875C043AF93CF97F60 /* Instagram.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Instagram.swift; path = Source/Providers/Instagram.swift; sourceTree = "<group>"; };
+		CDE5877D0BE291AA129FD859DC7CBD58 /* Pods-iOSapp-Spotifier-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOSapp-Spotifier-resources.sh"; sourceTree = "<group>"; };
+		CE6D04E31806419424CEFF70A3ECE0FE /* SoundCloud.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoundCloud.swift; path = Source/Providers/SoundCloud.swift; sourceTree = "<group>"; };
+		D377AAAE85BA0C2B9AB5645F98338066 /* Token.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Token.swift; path = Source/Token.swift; sourceTree = "<group>"; };
+		D8A5A4A9A7DEF6E4B188AF154AC34764 /* Slack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Slack.swift; path = Source/Providers/Slack.swift; sourceTree = "<group>"; };
+		E4C3366BF625E8572A7D21EB19EEC928 /* Spotify.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spotify.swift; path = Source/Providers/Spotify.swift; sourceTree = "<group>"; };
+		EC88D24DC8FB3938E75F4A7E04BADB3F /* Reddit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reddit.swift; path = Source/Providers/Reddit.swift; sourceTree = "<group>"; };
+		F189E23D948F414365F6A99C862DAB23 /* TinyConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-umbrella.h"; sourceTree = "<group>"; };
+		F4C7FBDB8168C30AFA8BE4DC6AA9C520 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABA7BE5AEAC9AA1992791087320FE62 /* SwiftyOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyOAuth.framework; path = SwiftyOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB3D0CD91E153B158E775D9A247BEC46 /* TokenStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenStore.swift; path = Source/TokenStores/TokenStore.swift; sourceTree = "<group>"; };
+		FD5CFC05605C8A593B8028588131C0DE /* Medium.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Medium.swift; path = Source/Providers/Medium.swift; sourceTree = "<group>"; };
+		FD7178C0C1E13AFE6B192DF2312CD07B /* SwiftyOAuth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyOAuth-umbrella.h"; sourceTree = "<group>"; };
+		FF6FDA2F9DBA38B28A9FD59C7959121A /* StackExchange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StackExchange.swift; path = Source/Providers/StackExchange.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BE00533EF207F53A926ADD5F90DD959 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				128FBDE60F98679993A6529D4932A1D9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B2DA40700A0B93C9628AE420E290D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D039DC8FE7B21B7745D13CAB1B1A7756 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84126B9A0BAC0C4EF4D35EFAA824D83D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87BFF6451A83C51725395A390CF1E6D8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1253FC59AAD5333C7912F5D2ABF4E53B /* SwiftyOAuth */ = {
+			isa = PBXGroup;
+			children = (
+				2C2B37677F3E632F927AEB20614CEFF2 /* Basecamp.swift */,
+				4475B6BB42A04B37DFB2B526D2E9F355 /* Dribbble.swift */,
+				BA8923F6359240160661B1946DC8C1E6 /* Dropbox.swift */,
+				560AFC6627D7412699193F3720A6CD3D /* Error.swift */,
+				97F11026F1C4FCF1712F01ADAB09B5E0 /* Feedly.swift */,
+				A8962F67EA8C1B394CB84B02E77FF643 /* Foursquare.swift */,
+				3FBCA6E517B31C287C70A54007228608 /* GitHub.swift */,
+				198CB814210FB1A1775538488EFD1394 /* Google.swift */,
+				A230DB9F4AC39A03565CE8EAFCB949FB /* GrantType.swift */,
+				6B8093E95A294AA957CF1EBA0C56B71E /* HTTP.swift */,
+				CDA1EE0422E4B7875C043AF93CF97F60 /* Instagram.swift */,
+				A2E55650912976E61FF36711A59A28EC /* Keychain.swift */,
+				882F4C4B4D19A1C99D4715B13F285EB4 /* KeychainStore.swift */,
+				FD5CFC05605C8A593B8028588131C0DE /* Medium.swift */,
+				8831436BF6B25E0331892650255697BB /* Meetup.swift */,
+				125594A019A04B86974115291EB867E5 /* Provider.swift */,
+				EC88D24DC8FB3938E75F4A7E04BADB3F /* Reddit.swift */,
+				00E5895314E2609DF4D18FF66412B967 /* ResponseType.swift */,
+				0CE8051149EA7D6F537D4455EE7678E5 /* Result.swift */,
+				BA35F3D84D318085D02722A603A359BF /* ServerTrustPolicy.swift */,
+				D8A5A4A9A7DEF6E4B188AF154AC34764 /* Slack.swift */,
+				CE6D04E31806419424CEFF70A3ECE0FE /* SoundCloud.swift */,
+				E4C3366BF625E8572A7D21EB19EEC928 /* Spotify.swift */,
+				FF6FDA2F9DBA38B28A9FD59C7959121A /* StackExchange.swift */,
+				569ECEB3A4031622A8047CA29F990F62 /* Strava.swift */,
+				A97B36C715A13CEF404B763E6A537708 /* Stripe.swift */,
+				5BFF5F1F299E59648424B71A3DC58D60 /* Stuart.swift */,
+				1FBA23E6397821F8E142676C3A8E7505 /* SwiftyOAuth.h */,
+				D377AAAE85BA0C2B9AB5645F98338066 /* Token.swift */,
+				FB3D0CD91E153B158E775D9A247BEC46 /* TokenStore.swift */,
+				4026BF03CE5A5360588D26B8E26626BD /* TokenType.swift */,
+				1B38BE1223F8C0F413ECF4AB03406730 /* Uber.swift */,
+				87F57E8BCEA93F9E11E6DC90E1567388 /* UberRUSH.swift */,
+				46C77D0AB3DB41F38DF2E48455D35787 /* UbiquitousKeyValueStore.swift */,
+				850EB5AB996D3814F9117726A3D5F33C /* UserDefaults.swift */,
+				6CA00B4ECDE53BC02931647A3EC51C3A /* Utilities.swift */,
+				368907BDF290F7FB2C1B964D8C5247C5 /* Vimeo.swift */,
+				B98D220EE266400D47359A897B144CBA /* WebViewController.swift */,
+				B5C061F385502C2A15F2AAD3B7289A47 /* Weibo.swift */,
+				5D842A826522E79507AF933843BB49E4 /* Support Files */,
+			);
+			name = SwiftyOAuth;
+			path = SwiftyOAuth;
+			sourceTree = "<group>";
+		};
+		5D842A826522E79507AF933843BB49E4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4C7FBDB8168C30AFA8BE4DC6AA9C520 /* Info.plist */,
+				008F443FCEA351B27061209F9F7FE285 /* SwiftyOAuth.modulemap */,
+				7C98FB2A9AAA54309F150764A1F5CB2B /* SwiftyOAuth.xcconfig */,
+				73654C6D07F4304A351CEB409E937D80 /* SwiftyOAuth-dummy.m */,
+				17160E321D626CD70D76C6328973B285 /* SwiftyOAuth-prefix.pch */,
+				FD7178C0C1E13AFE6B192DF2312CD07B /* SwiftyOAuth-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyOAuth";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				F778273083C92307FDD2E29DEB83037D /* Pods */,
+				BAD42B1B7DAF94C0909ED58B73CB2646 /* Products */,
+				FEDA07C5E18823F11CAE9AE40C6C6309 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		884538DBE2E2D5EA0C3ABBEA53FBC0F9 /* Pods-iOSapp-Spotifier */ = {
+			isa = PBXGroup;
+			children = (
+				A71FCB12B7CA32166C4E064964BDFBE0 /* Info.plist */,
+				1C2ED2FC1F1EB43E51974DA93298A4B9 /* Pods-iOSapp-Spotifier.modulemap */,
+				44D2440CCB22F0A57B006D9EB1D23C9E /* Pods-iOSapp-Spotifier-acknowledgements.markdown */,
+				B36E004E74D8BB2119018932EB8C607B /* Pods-iOSapp-Spotifier-acknowledgements.plist */,
+				553157CADA78D1E53126DC2BEB3A6DE5 /* Pods-iOSapp-Spotifier-dummy.m */,
+				5702457CA4AFE5D4AF7D0CFCB3C248A4 /* Pods-iOSapp-Spotifier-frameworks.sh */,
+				CDE5877D0BE291AA129FD859DC7CBD58 /* Pods-iOSapp-Spotifier-resources.sh */,
+				B55F984019C3E820370E5545EB21FFA9 /* Pods-iOSapp-Spotifier-umbrella.h */,
+				5C0D57E00BEBB8BF8FDF949E355AE179 /* Pods-iOSapp-Spotifier.debug.xcconfig */,
+				868F7132ED3A6B849011B395BF884C1E /* Pods-iOSapp-Spotifier.release.xcconfig */,
+			);
+			name = "Pods-iOSapp-Spotifier";
+			path = "Target Support Files/Pods-iOSapp-Spotifier";
+			sourceTree = "<group>";
+		};
+		9AF60D313D184B81A2C93E036DF4B43F /* TinyConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				0732C9BA3546D638555C6525D19AB697 /* Abstraction.swift */,
+				5CEF51100710CEF208F97B8B13BDC5CD /* Constrainable.swift */,
+				188C7E8A9804DEDFAD2C4BC3CF302BB6 /* Constraints.swift */,
+				03A2BDA09AACFABCEF9BA4E6CAED3DEB /* Stack.swift */,
+				67D257A3749FAF86F866E888DE1A5693 /* TinyConstraints.swift */,
+				5E4332376B0E6CFB8EFBA21F0A6B0B48 /* TinyConstraints+superview.swift */,
+				DE661C23C515091AC96AEC096C997DD2 /* Support Files */,
+			);
+			name = TinyConstraints;
+			path = TinyConstraints;
+			sourceTree = "<group>";
+		};
+		BAD42B1B7DAF94C0909ED58B73CB2646 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0461539ED9DBA95798578C9C395EFA85 /* Pods_iOSapp_Spotifier.framework */,
+				FABA7BE5AEAC9AA1992791087320FE62 /* SwiftyOAuth.framework */,
+				628F6E908163231A8DA0B8D1F8CB2E1F /* TinyConstraints.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DE661C23C515091AC96AEC096C997DD2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				03348105EA8AFAB5D83A3C1D4F009DE6 /* Info.plist */,
+				C6B3788905F634D98FF249E8B1999099 /* TinyConstraints.modulemap */,
+				6ECE80336A76BD664A1F153CDE560524 /* TinyConstraints.xcconfig */,
+				77C0A606F97365F3D66FB0349D806146 /* TinyConstraints-dummy.m */,
+				BC13A81928282951CFADC2FA2FE718EB /* TinyConstraints-prefix.pch */,
+				F189E23D948F414365F6A99C862DAB23 /* TinyConstraints-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TinyConstraints";
+			sourceTree = "<group>";
+		};
+		F778273083C92307FDD2E29DEB83037D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1253FC59AAD5333C7912F5D2ABF4E53B /* SwiftyOAuth */,
+				9AF60D313D184B81A2C93E036DF4B43F /* TinyConstraints */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FEDA07C5E18823F11CAE9AE40C6C6309 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				884538DBE2E2D5EA0C3ABBEA53FBC0F9 /* Pods-iOSapp-Spotifier */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		145AC517C887026A98B007BB40A385E2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB29F7CD4A83F4AA2EA12C71F31D235 /* TinyConstraints-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0480B07888D9451AD8DE9A79224385D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C16AEB83C5C650BFA15FC3000D292798 /* SwiftyOAuth-umbrella.h in Headers */,
+				7BE407AD64D1CA5D610C70AA4D23EC26 /* SwiftyOAuth.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D432077247E44DDCBA9B13F9A47DFBB1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14CB1C0E9B9B21A6DC5332B0C8FD6237 /* Pods-iOSapp-Spotifier-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		266F8FDA1211A2694F3DBAE85501A596 /* TinyConstraints */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1676A8C7CEC06F471F5247ECBC7853D /* Build configuration list for PBXNativeTarget "TinyConstraints" */;
+			buildPhases = (
+				2A82C2BCDF1E0A2BBADFA7C2415592BF /* Sources */,
+				2BE00533EF207F53A926ADD5F90DD959 /* Frameworks */,
+				145AC517C887026A98B007BB40A385E2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TinyConstraints;
+			productName = TinyConstraints;
+			productReference = 628F6E908163231A8DA0B8D1F8CB2E1F /* TinyConstraints.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2A9E9D88223ACBFC56536C215D8791CE /* Pods-iOSapp-Spotifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D2A9A6E9AC03B30F650A736046A8830 /* Build configuration list for PBXNativeTarget "Pods-iOSapp-Spotifier" */;
+			buildPhases = (
+				AB0C8D7F9742B383B913DA94C3D42D24 /* Sources */,
+				84126B9A0BAC0C4EF4D35EFAA824D83D /* Frameworks */,
+				D432077247E44DDCBA9B13F9A47DFBB1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA98C6A6829C6F1A1F86A2AC7F71D96B /* PBXTargetDependency */,
+				5AEE8792BE95E39B63089549186CB17A /* PBXTargetDependency */,
+			);
+			name = "Pods-iOSapp-Spotifier";
+			productName = "Pods-iOSapp-Spotifier";
+			productReference = 0461539ED9DBA95798578C9C395EFA85 /* Pods_iOSapp_Spotifier.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		52349602048031465247AF43C7EE199B /* SwiftyOAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA2BD63BF97E0CE3A2CFBAD178865293 /* Build configuration list for PBXNativeTarget "SwiftyOAuth" */;
+			buildPhases = (
+				564AEFB57C73E0B58E194996C56B8AC2 /* Sources */,
+				68B2DA40700A0B93C9628AE420E290D5 /* Frameworks */,
+				B0480B07888D9451AD8DE9A79224385D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyOAuth;
+			productName = SwiftyOAuth;
+			productReference = FABA7BE5AEAC9AA1992791087320FE62 /* SwiftyOAuth.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = BAD42B1B7DAF94C0909ED58B73CB2646 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A9E9D88223ACBFC56536C215D8791CE /* Pods-iOSapp-Spotifier */,
+				52349602048031465247AF43C7EE199B /* SwiftyOAuth */,
+				266F8FDA1211A2694F3DBAE85501A596 /* TinyConstraints */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A82C2BCDF1E0A2BBADFA7C2415592BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877A862CA4B08EB6ACD2C9F9F90C4BB6 /* Abstraction.swift in Sources */,
+				DF186D7D99091E7AED1EF2A3E26B5956 /* Constrainable.swift in Sources */,
+				DF558CE78BF2597FF1CAD6060C92F8F3 /* Constraints.swift in Sources */,
+				E617C4BDA11C77F87FBEEDAAE32434D5 /* Stack.swift in Sources */,
+				890C407D49370C44BB060A4D51C33959 /* TinyConstraints+superview.swift in Sources */,
+				0EF7007D56E9EA21D2D66DF09B3A4431 /* TinyConstraints-dummy.m in Sources */,
+				EA5030931BCEFFBD0279B40EB6378B63 /* TinyConstraints.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		564AEFB57C73E0B58E194996C56B8AC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				574E67B2EAB703340247FE3B0B9FD605 /* Basecamp.swift in Sources */,
+				A1A117E8388CB9B3B7BA4F2E5D171DB3 /* Dribbble.swift in Sources */,
+				99DD108E6DAE7FB35072976C456612FC /* Dropbox.swift in Sources */,
+				88B0D42B94A9566BAF96813ED2C49677 /* Error.swift in Sources */,
+				4755E2F7C71E5B5416C836BA0644A32F /* Feedly.swift in Sources */,
+				48D69037FE6C576BBC1FB2255145CAF6 /* Foursquare.swift in Sources */,
+				61941283438691AA0F06CDD0723D00A1 /* GitHub.swift in Sources */,
+				43C5DD92D8814B0DD742F6841956DE77 /* Google.swift in Sources */,
+				4C80AF032F9FEE4A44F638D605A9BFB7 /* GrantType.swift in Sources */,
+				FE77DBEFB0E32E750355FBB34C5EF121 /* HTTP.swift in Sources */,
+				F02354C8F24D3477895CB32CF68AF49D /* Instagram.swift in Sources */,
+				DA32233343FB9510553444289EDD6A8D /* Keychain.swift in Sources */,
+				C205FBDE30EE421691ED5BB5A3EFEB01 /* KeychainStore.swift in Sources */,
+				96A7445439B4FA1A1521CA26B359FF2C /* Medium.swift in Sources */,
+				EAC0B3060C85A759F58F22EF064195EA /* Meetup.swift in Sources */,
+				025C919732874C1A70B33E47218A68D8 /* Provider.swift in Sources */,
+				48DAFED8E9165A227636C4DE4C9CD463 /* Reddit.swift in Sources */,
+				091C47C32BA65D6994F15617BA72337D /* ResponseType.swift in Sources */,
+				5FF7ABDAB4A8DF019228903209283720 /* Result.swift in Sources */,
+				016F9D386480B163F3A287DD0D7F1E55 /* ServerTrustPolicy.swift in Sources */,
+				E8365C6A873D75A2A09CA12E0B234FD6 /* Slack.swift in Sources */,
+				AB8922A2237588E323D401C531AE8B2D /* SoundCloud.swift in Sources */,
+				00347D9058F5502CCED4592B9CD6209D /* Spotify.swift in Sources */,
+				0AAEF5B4C663C3FF65D04245F8090782 /* StackExchange.swift in Sources */,
+				53D26CE14261D10671721D0B0F678318 /* Strava.swift in Sources */,
+				62412002F949FC12E8919FF70DAC839F /* Stripe.swift in Sources */,
+				CF9001AC4B110C30B28268F66EB5EBF5 /* Stuart.swift in Sources */,
+				92514F1D43CDA9658ED1DF884624A82C /* SwiftyOAuth-dummy.m in Sources */,
+				6EE2BE697B1B1796FF73F27CDE132210 /* Token.swift in Sources */,
+				DDA7CA8CAB90E6F20841E61EF0DD8D86 /* TokenStore.swift in Sources */,
+				94A07EE65AF94E20A46F21C43A4ED726 /* TokenType.swift in Sources */,
+				B8D8EB77D58489A622680B238D3910E2 /* Uber.swift in Sources */,
+				7ECD7B9B3C5A6C961DAEA9A9DEE4ACEA /* UberRUSH.swift in Sources */,
+				10C6DAC021AA1F975481BE3E33A9BDA1 /* UbiquitousKeyValueStore.swift in Sources */,
+				F18CECFEFB709E27CD5F6E0D9ED94FD5 /* UserDefaults.swift in Sources */,
+				C0E8D606E4D88471DE176246E5F1779C /* Utilities.swift in Sources */,
+				4F846C728D88F84C7B48D0250896395F /* Vimeo.swift in Sources */,
+				9710187B369300DDB3B6061C39ADFBA6 /* WebViewController.swift in Sources */,
+				67C4C1D985C0647ED48552769FA671DD /* Weibo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB0C8D7F9742B383B913DA94C3D42D24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1350B9A9A89DD8B5DB705B33DB194A39 /* Pods-iOSapp-Spotifier-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5AEE8792BE95E39B63089549186CB17A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TinyConstraints;
+			target = 266F8FDA1211A2694F3DBAE85501A596 /* TinyConstraints */;
+			targetProxy = 4E586DD01797D927555BC864FC710D37 /* PBXContainerItemProxy */;
+		};
+		EA98C6A6829C6F1A1F86A2AC7F71D96B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyOAuth;
+			target = 52349602048031465247AF43C7EE199B /* SwiftyOAuth */;
+			targetProxy = 5F924509484D50913685198BA8F9B12F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		08638A96A528B1EC32DE62F8A728389D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		54F50EB69FD805D3A20BA36724EB7C3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C0D57E00BEBB8BF8FDF949E355AE179 /* Pods-iOSapp-Spotifier.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iOSapp-Spotifier/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iOSapp-Spotifier/Pods-iOSapp-Spotifier.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5F326703F86DD9198D96257B750B9E0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ECE80336A76BD664A1F153CDE560524 /* TinyConstraints.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TinyConstraints/TinyConstraints-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TinyConstraints/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TinyConstraints/TinyConstraints.modulemap";
+				PRODUCT_MODULE_NAME = TinyConstraints;
+				PRODUCT_NAME = TinyConstraints;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6D2F80282D3FC3957FF0761BBD7691CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C98FB2A9AAA54309F150764A1F5CB2B /* SwiftyOAuth.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyOAuth/SwiftyOAuth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyOAuth/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyOAuth/SwiftyOAuth.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyOAuth;
+				PRODUCT_NAME = SwiftyOAuth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		77C22C86AD6698D75FEDADB08F9DB844 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ECE80336A76BD664A1F153CDE560524 /* TinyConstraints.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TinyConstraints/TinyConstraints-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TinyConstraints/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TinyConstraints/TinyConstraints.modulemap";
+				PRODUCT_MODULE_NAME = TinyConstraints;
+				PRODUCT_NAME = TinyConstraints;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8D3BFD586B2706FCC31455256D9D2626 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 868F7132ED3A6B849011B395BF884C1E /* Pods-iOSapp-Spotifier.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iOSapp-Spotifier/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iOSapp-Spotifier/Pods-iOSapp-Spotifier.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9DAE5233986C01ADB6E67169C53A3FD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B113539D9EEF6A85A4A484D0F20C546E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C98FB2A9AAA54309F150764A1F5CB2B /* SwiftyOAuth.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyOAuth/SwiftyOAuth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyOAuth/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyOAuth/SwiftyOAuth.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyOAuth;
+				PRODUCT_NAME = SwiftyOAuth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DAE5233986C01ADB6E67169C53A3FD2 /* Debug */,
+				08638A96A528B1EC32DE62F8A728389D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D2A9A6E9AC03B30F650A736046A8830 /* Build configuration list for PBXNativeTarget "Pods-iOSapp-Spotifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54F50EB69FD805D3A20BA36724EB7C3E /* Debug */,
+				8D3BFD586B2706FCC31455256D9D2626 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1676A8C7CEC06F471F5247ECBC7853D /* Build configuration list for PBXNativeTarget "TinyConstraints" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77C22C86AD6698D75FEDADB08F9DB844 /* Debug */,
+				5F326703F86DD9198D96257B750B9E0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA2BD63BF97E0CE3A2CFBAD178865293 /* Build configuration list for PBXNativeTarget "SwiftyOAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B113539D9EEF6A85A4A484D0F20C546E /* Debug */,
+				6D2F80282D3FC3957FF0761BBD7691CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

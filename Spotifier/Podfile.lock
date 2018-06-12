@@ -1,0 +1,28 @@
+PODS:
+  - SwiftyOAuth (1.3)
+  - TinyConstraints (3.1.0)
+
+DEPENDENCIES:
+  - SwiftyOAuth (from `https://github.com/radianttap/SwiftyOAuth.git`)
+  - TinyConstraints
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - TinyConstraints
+
+EXTERNAL SOURCES:
+  SwiftyOAuth:
+    :git: https://github.com/radianttap/SwiftyOAuth.git
+
+CHECKOUT OPTIONS:
+  SwiftyOAuth:
+    :commit: ec93b99904e0f18ba420f9ff7dac26b82d0e3fad
+    :git: https://github.com/radianttap/SwiftyOAuth.git
+
+SPEC CHECKSUMS:
+  SwiftyOAuth: e0ab9e52a40ce21521314c25eb53ad232987bb9b
+  TinyConstraints: 4721a4b303c799328867078ade6560e152df54d1
+
+PODFILE CHECKSUM: fb4ddc2fea5da2636d5e6755b4e2b2c5db15d2ca
+
+COCOAPODS: 1.5.0
