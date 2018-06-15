@@ -19,7 +19,7 @@ final class Spotify {
     
     //init() {}
     
-    typealias Callback = (JSON?, SpotifyError?) -> Void
+    typealias Callback = (Data?, SpotifyError?) -> Void
     
     func call(endpoint: Endpoint, callback: @escaping Callback) {
         let apiRequest = (endpoint, callback)
@@ -97,15 +97,15 @@ private extension Spotify {
                 return
             }
             
-            // process
-            guard let obj = try? JSONSerialization.jsonObject(with: data, options: []),
-                let json = obj as? [String: Any]
-                else {
-                    callback(nil, SpotifyError.invalidResponse)
-                    return
-            }
-            
-            callback(json, nil)
+//            // process
+//            guard let obj = try? JSONSerialization.jsonObject(with: data, options: []),
+//                let json = obj as? [String: Any]
+//                else {
+//                    callback(nil, SpotifyError.invalidResponse)
+//                    return
+//            }
+//
+            callback(data, nil)
         }
         task.resume()
     }

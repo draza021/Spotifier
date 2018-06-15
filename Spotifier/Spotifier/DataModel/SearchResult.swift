@@ -11,5 +11,5 @@ import UIKit
 protocol SearchResult {
     var id: String { get }
     var name: String { get }
-    var image: UIImage? { get }
+    var imageURL: URL? { get }
 }

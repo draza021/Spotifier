@@ -11,4 +11,6 @@ import Foundation
 enum DataError: Error {
     case spotifyError(SpotifyError)
     case noData
+    
+    case genericError(Swift.Error)
 }

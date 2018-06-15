@@ -14,28 +14,43 @@ final class DataManager {
     private var searchResults: [String: [SearchResult]] = [:]
     
 }
-
-
-
+   
 extension DataManager {
     func search(for term: String, type: Spotify.SearchType, callback: @escaping ([SearchResult], DataError?) -> Void) {
         
         callback(searchResults[term] ?? [], nil)
         
         let endpoint: Spotify.Endpoint = .search(term: term, type: type, market: nil, limit: nil, offset: nil)
-        spotify.call(endpoint: endpoint) { (json, spotifyError) in
+        spotify.call(endpoint: endpoint) {
+            fileData, spotifyError in
             
             if let spotifyError = spotifyError {
                 callback([], .spotifyError(spotifyError))
                 return
             }
             
-            guard let json = json else {
+            guard let fileData = fileData else {
                 callback([], .noData)
                 return
             }
             
-            // convert JSON to Artist, Album, etc.
+            switch type {
+            case .artist:
+                let decoder = JSONDecoder()
+                
+                do {
+                    let artistResponse = try decoder.decode(SpotifyArtistsResponse.self, from: fileData)
+                    let artists: [SearchResult] = artistResponse.artists.items
+                    callback(artists, nil)
+                    
+                } catch {
+                    callback([], .genericError(error))
+                }
+                
+            case .album, .playlist, .track:
+                break
+            }
+            
             
             // return back to UI
             callback([], nil)
