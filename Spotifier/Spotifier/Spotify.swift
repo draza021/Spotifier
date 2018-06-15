@@ -12,6 +12,9 @@ import SwiftyOAuth
 
 typealias JSON = [String: Any]
 
+//Client ID: badf9c13b4604dd3b6f3335df4542100
+//Client Secret: a889c1f8e98f4e07a93fbb56ce5d19a5
+
 final class Spotify {
     
     //init() {}
@@ -27,23 +30,39 @@ final class Spotify {
         
     }
     
+    private let oAuthProvider = Provider.spotify(clientID: "badf9c13b4604dd3b6f3335df4542100", clientSecret: "a889c1f8e98f4e07a93fbb56ce5d19a5")
     private typealias APIRequest = (endpoint: Endpoint, callback: Callback)
     private var queuedRequests: [APIRequest] = []
+    private var isFetchingToken = false {
+        didSet{
+            if isFetchingToken { return }
+            processQueuedRequests()
+        }
+    }
 }
 
 private extension Spotify {
     private func oAuth(request: APIRequest) {
+        if isFetchingToken {
+            queuedRequests.append(request)
+            return
+        }
         
         // is token available
-        if false {
+        guard let token = oAuthProvider.token else {
             queuedRequests.append(request)
             
             fetchToken()
             return
         }
         
-        
         // is token valid
+        if token.isExpired {
+            queuedRequests.append(request)
+            
+            refreshToken()
+            return
+        }
         
         //execute
         execute(request: request)
@@ -51,28 +70,77 @@ private extension Spotify {
     }
     
     private func execute(request: APIRequest) {
-        let req = request.endpoint.urlRequest
-        let task = URLSession.shared.dataTask(with: req) { (data, response, error) in
+        var urlReq = request.endpoint.urlRequest
+        let callback = request.callback
+        
+        urlReq.addValue("Bearer \(oAuthProvider.token!.accessToken)", forHTTPHeaderField: "Authorization")
+        
+        let task = URLSession.shared.dataTask(with: urlReq) { (data, response, error) in
             
-            print(error?.localizedDescription ?? "")
+            if let error = error {
+                callback(nil, SpotifyError.urlError(error as! URLError))
+                return
+            }
             
-            // request.callback()
+            guard let httpResponse = response as? HTTPURLResponse else {
+                callback(nil, SpotifyError.invalidResponse)
+                return
+            }
             
+            if !(200..<300).contains(httpResponse.statusCode) {
+                callback(nil, SpotifyError.invalidResponse)
+                return
+            }
+            
+            guard let data = data else {
+                callback(nil, SpotifyError.noData)
+                return
+            }
+            
+            // process
+            guard let obj = try? JSONSerialization.jsonObject(with: data, options: []),
+                let json = obj as? [String: Any]
+                else {
+                    callback(nil, SpotifyError.invalidResponse)
+                    return
+            }
+            
+            callback(json, nil)
         }
         task.resume()
     }
     
     private func fetchToken() {
-       
+        if isFetchingToken { return }
         
-        
-        processQueuedRequests()
+        isFetchingToken = true
+        oAuthProvider.authorize {
+            [unowned self] result in
+            
+            self.isFetchingToken = false
+            
+            switch result {
+            case .success(let token):
+                print(token)
+                break
+                
+            case.failure:
+                // TODO:
+                break
+            }
+        }
+    }
+    
+    private func refreshToken() {
+        fetchToken()
     }
     
     func processQueuedRequests() {
         for apiReq in queuedRequests {
             oAuth(request: apiReq)
         }
+        
+        queuedRequests.removeAll()
     }
 }
 

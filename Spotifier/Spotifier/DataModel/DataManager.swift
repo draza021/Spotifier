@@ -41,6 +41,5 @@ extension DataManager {
             callback([], nil)
             
         }
-        
     }
 }

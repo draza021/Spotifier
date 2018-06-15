@@ -9,5 +9,7 @@
 import Foundation
 
 enum SpotifyError: Error {
-    
+    case urlError(URLError)
+    case invalidResponse
+    case noData
 }
