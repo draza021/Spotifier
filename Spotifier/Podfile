@@ -7,7 +7,7 @@ abstract_target 'iOSapp' do
 	pod 'TinyConstraints'
 
 	# Image Cache
-    # pod 'Kingfisher', 	:git => 'https://github.com/radianttap/Kingfisher.git'
+  pod 'Kingfisher', 	:git => 'https://github.com/radianttap/Kingfisher.git'
 
 	# OAuth 2
 	pod 'SwiftyOAuth', 	:git => 'https://github.com/radianttap/SwiftyOAuth.git'

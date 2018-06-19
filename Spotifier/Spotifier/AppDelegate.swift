@@ -21,20 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Create middleware managers
         dataManager = DataManager()
-        
-        dataManager?.search(for: "bob sinclair", type: .artist, callback: { (_, _) in
-        
-        })
-        
-        return true
-        
+       
         // Create app dependency
         
         let dependencies = AppDependency(dataManager: dataManager)
         
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SearchController") as! SearchController
+        let storyboard = UIStoryboard(name: SearchController.storyboardName, bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: SearchController.storyboardName) as! SearchController
         vc.dependencies = dependencies
         
         let nc = UINavigationController(rootViewController: vc)
