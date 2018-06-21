@@ -47,7 +47,21 @@ extension DataManager {
                     callback([], .genericError(error))
                 }
                 
-            case .album, .playlist, .track:
+            case .album:
+                let decoder = JSONDecoder()
+                
+                do {
+                    let albumResponse = try decoder.decode(SpotifyAlbumsResponse.self, from: fileData)
+                    let albums: [SearchResult] = albumResponse.albums.items
+                    callback(albums, nil)
+                    
+                } catch {
+                    callback([], .genericError(error))
+                }
+                
+            case .playlist:
+                break
+            case .track:
                 break
             }
             

@@ -8,6 +8,26 @@
 
 import Foundation
 
-final class Album {
+struct Album: Codable {
+    let name: String
+    let id: String
     
+    var images: [Image] = []
 }
+
+//second level
+struct SpotifyAlbumsContainer: Codable {
+    let items: [Album]
+}
+
+// first level
+struct SpotifyAlbumsResponse: Codable {
+    let albums: SpotifyAlbumsContainer
+}
+
+extension Album: SearchResult {
+    var imageURL: URL? {
+        return images.first?.url
+    }
+}
+

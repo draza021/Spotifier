@@ -8,11 +8,6 @@
 
 import UIKit
 
-//final class Artist {
-//
-//    var albums: [Album] = []
-//}
-
 struct Followers: Codable {
     let total: Int
 }
