@@ -13,47 +13,77 @@ final class SearchController: UIViewController, NeedsDependency {
     
     // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var searchBar: UIVisualEffectView!
+    @IBOutlet private weak var searchField: UITextField!
+    @IBOutlet private weak var segmentedControll: UISegmentedControl!
+    
+    
     
     // MARK: - External Dependencies
     var dependencies: AppDependency?
     
     // MARK: - Local data model
-    private var searchTerm: String?
-    private var searchType: Spotify.SearchType = .artist
-    
-    private var results: [SearchResult] = [] {
+    private var searchTerm: String? {
         didSet {
-            // TODO: - Update UI
+            if !isViewLoaded { return }
+            search()
+        }
+    }
+    private var searchType: Spotify.SearchType = .artist {
+        didSet {
+            if !isViewLoaded { return }
+            search()
         }
     }
     
+    private var results: [SearchResult] = [] {
+        didSet {
+            if !isViewLoaded { return }
+            collectionView.reloadData()
+        }
+    }
+    
+    // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.dataSource = self
-        collectionView.delegate = self
         
         let cellNib = UINib(nibName: SearchCell.reuseIdentifier, bundle: nil)
         collectionView.register(cellNib, forCellWithReuseIdentifier: SearchCell.reuseIdentifier)
         
+        search()
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
-        searchTerm = "taylor"
-        search()
+//        additionalSafeAreaInsets = UIEdgeInsetsMake(searchBar.bounds.height, 0, 0, 0)
+        collectionView.contentInset.top = searchBar.bounds.height
     }
 }
 
 private extension SearchController {
+    
+    @IBAction func changeSearchType(_ sender: UISegmentedControl) {
+        guard let st = Spotify.SearchType(index: sender.selectedSegmentIndex) else { return }
+        searchType = st
+    }
+    
+    @IBAction func changeSearchTerm(_ sender: UITextField) {
+        searchTerm = sender.text
+    }
     
     func search() {
         guard let dataManager = dependencies?.dataManager else {
             fatalError("Missing data manager")
         }
         
-        guard let s = searchTerm else { return }
+        guard let s = searchTerm, s.count > 0 else {
+            results = []
+            return
+        }
         
         dataManager.search(for: s, type: searchType) {
             [weak self] arr, error in
@@ -61,10 +91,8 @@ private extension SearchController {
             if arr.count == 0 { return }
             // TODO: -
             
-            self?.results = arr
-            
             DispatchQueue.main.async {
-                self?.collectionView.reloadData()
+                self?.results = arr
             }
         }
     }
@@ -88,28 +116,6 @@ extension SearchController: UICollectionViewDataSource {
         cell.populate(with: res)
         
         return cell
-    }
-}
-
-extension SearchController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        guard let layout = collectionViewLayout as? UICollectionViewFlowLayout else { fatalError() }
-        
-        var itemSize = layout.itemSize
-        let aspectRatio = itemSize.width / itemSize.height
-        
-        var availableWidth = collectionView.bounds.width
-        let columns = floor(availableWidth / itemSize.width)
-        
-        availableWidth -= (columns - 1) * layout.minimumInteritemSpacing
-        availableWidth -= (layout.sectionInset.left + layout.sectionInset.right)
-        
-        itemSize.width = availableWidth / columns
-        itemSize.height = itemSize.width * 1/aspectRatio
-        
-        return itemSize
     }
 }
 

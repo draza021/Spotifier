@@ -160,6 +160,21 @@ extension Spotify {
     
     enum SearchType: String {
         case album, artist, playlist, track
+        
+        init?(index: Int) {
+            switch index {
+            case 0:
+                self = .artist
+            case 1:
+                self = .album
+            case 2:
+                self = .track
+            case 3:
+                self = .playlist
+            default:
+                return nil
+            }
+        }
     }
     
     enum Endpoint {

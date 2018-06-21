@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ADF00A4F77AD9D67A1EF25D2 /* Pods_iOSapp_Spotifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397B47FDABCF1CFDEE40235F /* Pods_iOSapp_Spotifier.framework */; };
 		C20D0D6A20CFC5C800ED1612 /* SpotifyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20D0D6920CFC5C800ED1612 /* SpotifyError.swift */; };
+		C22E3EC020DB87CC002B6DBB /* SearchLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22E3EBF20DB87CC002B6DBB /* SearchLayout.swift */; };
 		C256C76720D3DAAD005F597E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C256C76620D3DAAD005F597E /* Image.swift */; };
 		C263E02720D965970011F616 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263E02520D965970011F616 /* SearchCell.swift */; };
 		C263E02820D965970011F616 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C263E02620D965970011F616 /* SearchCell.xib */; };
@@ -33,6 +34,7 @@
 		397B47FDABCF1CFDEE40235F /* Pods_iOSapp_Spotifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSapp_Spotifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		475508A04551C2CB7DD5F88A /* Pods-iOSapp-Spotifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSapp-Spotifier.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSapp-Spotifier/Pods-iOSapp-Spotifier.debug.xcconfig"; sourceTree = "<group>"; };
 		C20D0D6920CFC5C800ED1612 /* SpotifyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyError.swift; sourceTree = "<group>"; };
+		C22E3EBF20DB87CC002B6DBB /* SearchLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLayout.swift; sourceTree = "<group>"; };
 		C256C76620D3DAAD005F597E /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		C263E02520D965970011F616 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		C263E02620D965970011F616 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				C2943C7520C95A7F00EF0789 /* ArtistListController.swift */,
 				C263E02520D965970011F616 /* SearchCell.swift */,
 				C263E02620D965970011F616 /* SearchCell.xib */,
+				C22E3EBF20DB87CC002B6DBB /* SearchLayout.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2943C7B20C95D8600EF0789 /* Artist.swift in Sources */,
+				C22E3EC020DB87CC002B6DBB /* SearchLayout.swift in Sources */,
 				C2943C7620C95A7F00EF0789 /* ArtistListController.swift in Sources */,
 				C2943C7F20C95E1900EF0789 /* SearchResult.swift in Sources */,
 				C263E02720D965970011F616 /* SearchCell.swift in Sources */,
@@ -433,7 +437,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q4KMZUSUN5;
 				INFOPLIST_FILE = Spotifier/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.NSIDDevelopment.Spotifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -449,7 +456,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q4KMZUSUN5;
 				INFOPLIST_FILE = Spotifier/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.NSIDDevelopment.Spotifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
