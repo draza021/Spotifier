@@ -17,6 +17,7 @@ final class SearchCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        setup()
         cleanup()
     }
     
@@ -43,4 +44,13 @@ private extension SearchCell {
         label.text = nil
         photoView.image = nil
     }
+    
+    func setup() {
+        layer.cornerRadius = 4
+    }
 }
+
+
+
+
+

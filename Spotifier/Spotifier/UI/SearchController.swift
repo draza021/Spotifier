@@ -62,11 +62,17 @@ final class SearchController: UIViewController, NeedsDependency {
 //        additionalSafeAreaInsets = UIEdgeInsetsMake(searchBar.bounds.height, 0, 0, 0)
         collectionView.contentInset.top = searchBar.bounds.height
     }
+    
 }
 
 private extension SearchController {
     
     @IBAction func changeSearchType(_ sender: UISegmentedControl) {
+        guard let st = Spotify.SearchType(index: sender.selectedSegmentIndex) else { return }
+        searchType = st
+    }
+    
+    @IBAction func changeSearchTypeWithCustomControl(_ sender: CustomSegmentedControl) {
         guard let st = Spotify.SearchType(index: sender.selectedSegmentIndex) else { return }
         searchType = st
     }
