@@ -35,7 +35,7 @@ final class SearchLayout: UICollectionViewFlowLayout {
         availableWidth -= (sectionInset.left + sectionInset.right)
         
         itemSize.width = availableWidth / columns
-        itemSize.height = itemSize.width * 1/aspectRatio
+        //itemSize.height = itemSize.width * 1/aspectRatio
         
     }
     

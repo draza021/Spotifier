@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,16 +22,16 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEg-Yi-hyA" userLabel="myContentView">
-                        <rect key="frame" x="0.0" y="0.0" width="216" height="224"/>
+                        <rect key="frame" x="0.0" y="0.0" width="208" height="224"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Ob-Yi-VMu">
-                                <rect key="frame" x="0.0" y="0.0" width="216" height="216"/>
+                                <rect key="frame" x="0.0" y="0.0" width="208" height="208"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4Ob-Yi-VMu" secondAttribute="height" multiplier="1:1" id="bcp-aw-RVK"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="2Dk-NT-wYx">
-                                <rect key="frame" x="0.0" y="224" width="216" height="0.0"/>
+                                <rect key="frame" x="8" y="216" width="192" height="0.0"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -38,9 +39,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2Dk-NT-wYx" firstAttribute="leading" secondItem="nEg-Yi-hyA" secondAttribute="leading" id="4Cq-aG-PF0"/>
-                            <constraint firstAttribute="trailing" secondItem="2Dk-NT-wYx" secondAttribute="trailing" id="9Zd-H4-rTJ"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2Dk-NT-wYx" secondAttribute="bottom" id="LmT-Om-Rtb"/>
+                            <constraint firstItem="2Dk-NT-wYx" firstAttribute="leading" secondItem="nEg-Yi-hyA" secondAttribute="leadingMargin" id="4Cq-aG-PF0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Dk-NT-wYx" secondAttribute="trailing" id="9Zd-H4-rTJ"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2Dk-NT-wYx" secondAttribute="bottom" constant="8" id="LmT-Om-Rtb"/>
                             <constraint firstAttribute="trailing" secondItem="4Ob-Yi-VMu" secondAttribute="trailing" id="ToS-9c-qL2"/>
                             <constraint firstItem="4Ob-Yi-VMu" firstAttribute="top" secondItem="nEg-Yi-hyA" secondAttribute="top" id="YRT-te-cLf"/>
                             <constraint firstItem="2Dk-NT-wYx" firstAttribute="top" secondItem="4Ob-Yi-VMu" secondAttribute="bottom" constant="8" id="cCN-gL-m4Y"/>
