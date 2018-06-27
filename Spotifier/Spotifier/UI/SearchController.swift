@@ -29,6 +29,7 @@ final class SearchController: UIViewController, NeedsDependency {
             search()
         }
     }
+    
     private var searchType: Spotify.SearchType = .artist {
         didSet {
             if !isViewLoaded { return }
@@ -48,9 +49,12 @@ final class SearchController: UIViewController, NeedsDependency {
         super.viewDidLoad()
         
         collectionView.dataSource = self
+        searchField.delegate = self
         
         let cellNib = UINib(nibName: SearchCell.reuseIdentifier, bundle: nil)
         collectionView.register(cellNib, forCellWithReuseIdentifier: SearchCell.reuseIdentifier)
+        
+        setupNotificationHandlers()
         
         search()
         
@@ -66,6 +70,28 @@ final class SearchController: UIViewController, NeedsDependency {
 }
 
 private extension SearchController {
+    func setupNotificationHandlers() {
+        let nc = NotificationCenter.default
+        nc.addObserver(forName: NSNotification.Name.UIKeyboardWillShow, object: nil, queue: .main) {
+            [weak self] notification in
+            self?.processKeyboardAppearance(notification)
+        }
+        
+        nc.addObserver(forName: NSNotification.Name.UIKeyboardWillHide, object: nil, queue: .main) {
+            [weak self] notification in
+            self?.processKeyboardDisappearance(notification)
+        }
+    }
+    
+    func processKeyboardAppearance(_ notification: Notification) {
+        guard let userInfo = notification.userInfo,
+            let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect else { return }
+        collectionView.contentInset.bottom = keyboardFrame.height
+    }
+    
+    func processKeyboardDisappearance(_ notification: Notification) {
+        collectionView.contentInset.bottom = 0
+    }
     
     @IBAction func changeSearchType(_ sender: UISegmentedControl) {
         guard let st = Spotify.SearchType(index: sender.selectedSegmentIndex) else { return }
@@ -122,6 +148,13 @@ extension SearchController: UICollectionViewDataSource {
         cell.populate(with: res)
         
         return cell
+    }
+}
+
+extension SearchController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchField.resignFirstResponder()
+        return true
     }
 }
 
